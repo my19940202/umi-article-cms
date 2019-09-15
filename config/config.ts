@@ -106,27 +106,37 @@ export default {
           routes: [
             {
               path: '/',
-              redirect: '/welcome',
+              redirect: '/welcome'
             },
             {
-              path: '/welcome',
-              name: 'welcome',
+              path: '/introduction',
+              name: 'introduction',
               icon: 'smile',
-              component: './Welcome',
+              component: './Introduction'
             },
             {
-              name: 'success',
-              path: '/result/success',
-              component: './result/success',
+              name: 'taskCenter',
+              path: '/task-center',
+              component: './newPage'
+            },
+            {
+              name: 'blogger',
+              path: '/blogger',
+              component: './newPage'
             },
             {
               name: 'list',
               path: '/list/table/list',
-              component: './list/table/list',
+              component: './list/table/list'
             },
             {
-              component: './404',
+              name: 'newpage',
+              path: '/newpage',
+              component: './newPage'
             },
+            {
+              component: './404'
+            }
           ],
         },
         {

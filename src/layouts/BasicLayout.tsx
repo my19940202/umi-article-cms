@@ -55,7 +55,6 @@ const footerRender: BasicLayoutProps['footerRender'] = (_, defaultDom) => {
   return (
     <>
       {defaultDom}
-      <h1>西八</h1>
     </>
   );
 };

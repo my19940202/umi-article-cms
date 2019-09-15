@@ -47,4 +47,8 @@ export default {
   'menu.editor.flow': '流程编辑器',
   'menu.editor.mind': '脑图编辑器',
   'menu.editor.koni': '拓扑编辑器',
+  'menu.newpage': 'XSB测试页面',
+  'menu.introduction': '介绍',
+  'menu.taskCenter': '任务大厅',
+  'menu.blogger': '小红书博主列表'
 };
