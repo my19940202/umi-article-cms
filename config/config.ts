@@ -117,23 +117,23 @@ export default {
             {
               name: 'taskCenter',
               path: '/task-center',
-              component: './newPage'
+              component: './task/index'
             },
             {
               name: 'blogger',
               path: '/blogger',
-              component: './newPage'
+              component: './blogger/index'
             },
-            {
-              name: 'list',
-              path: '/list/table/list',
-              component: './list/table/list'
-            },
-            {
-              name: 'newpage',
-              path: '/newpage',
-              component: './newPage'
-            },
+            // {
+            //   name: 'list',
+            //   path: '/list/table/list',
+            //   component: './list/table/list'
+            // },
+            // {
+            //   name: 'newpage',
+            //   path: '/newpage',
+            //   component: './newPage'
+            // },
             {
               component: './404'
             }

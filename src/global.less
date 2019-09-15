@@ -22,6 +22,12 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  .table-filter-wrapper button {
+    margin-right: 10px;
+  }
+  .table-filter-wrapper button:last-child {
+    margin-right: 0;
+  }
 }
 
 ul,
@@ -43,5 +49,14 @@ ol {
         }
       }
     }
+  }
+}
+
+//
+.ant-radio-group {
+  .ant-radio-button-wrapper {
+    padding: 0 2px;
+    margin: 0 5px 5px 0;
+    border-radius: 4px;
   }
 }
