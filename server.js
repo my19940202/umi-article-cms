@@ -9,9 +9,7 @@ const app = express();
 const port = 8822;
 
 app.use(express.static(path.join(__dirname, 'dist')));
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
+// 调整 get /* /api/*的相关顺序 解决了刷新其他路由 not found的问题
 app.get('/api/*', (req, res) => {
   if (req.path === '/api/currentUser') {
     res.json({
@@ -65,11 +63,13 @@ app.get('/api/*', (req, res) => {
       phone: '0752-268888888',
     });
   }
-  res.json({
+  else {
+    res.json({
       status: 'ok',
       data: [],
       total: 100
-  });
+    });
+  }
 });
 app.post('/api/*', (req, res) => {
   res.json({
@@ -77,6 +77,10 @@ app.post('/api/*', (req, res) => {
       data: [],
       total: 100
   });
+});
+
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(port, () => console.log(`server is listening on port ${port}!`));
