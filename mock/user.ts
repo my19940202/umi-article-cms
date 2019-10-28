@@ -140,6 +140,5 @@ export default {
       path: '/base/category/list',
     });
   },
-
-  'GET  /api/login/captcha': getFakeCaptcha,
+  'GET  /api/login/captcha': getFakeCaptcha
 };
