@@ -50,5 +50,6 @@ export default {
   'menu.newpage': 'XSB测试页面',
   'menu.introduction': '介绍',
   'menu.taskCenter': '任务大厅',
-  'menu.blogger': '小红书博主列表'
+  'menu.blogger': '小红书博主列表',
+  'menu.tools': '禁用词工具',
 };

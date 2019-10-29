@@ -106,37 +106,37 @@ export default {
           routes: [
             {
               path: '/',
-              redirect: '/introduction'
+              redirect: '/introduction',
             },
             {
               path: '/introduction',
               name: 'introduction',
               icon: 'smile',
-              component: './Introduction'
+              component: './Introduction',
             },
             {
               name: 'taskCenter',
               path: '/task-center',
-              component: './task/index'
+              component: './task/index',
             },
             {
               name: 'blogger',
               path: '/blogger',
-              component: './blogger/index'
+              component: './blogger/index',
             },
             // {
             //   name: 'list',
             //   path: '/list/table/list',
             //   component: './list/table/list'
             // },
-            // {
-            //   name: 'newpage',
-            //   path: '/newpage',
-            //   component: './newPage'
-            // },
             {
-              component: './404'
-            }
+              name: 'tools',
+              path: '/tools',
+              component: './tools/index',
+            },
+            {
+              component: './404',
+            },
           ],
         },
         {
@@ -168,7 +168,7 @@ export default {
         resourcePath: string;
       },
       _: string,
-      localName: string
+      localName: string,
     ) => {
       if (
         context.resourcePath.includes('node_modules') ||
