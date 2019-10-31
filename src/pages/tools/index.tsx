@@ -16,7 +16,7 @@ export class Tools extends React.Component<{}, { replaceState: any }> {
   componentWillMount() {}
 
   handleEditorChange = state => {
-    let replaceHTML = state.toText();
+    let replaceHTML = state.toHTML();
     weijngDict.map(ele => {
       let weijngReg = new RegExp(`(${ele})`, 'g');
       replaceHTML = replaceHTML.replace(weijngReg, '<span style="color:red;">$1</span>')
