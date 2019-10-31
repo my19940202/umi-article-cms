@@ -4,7 +4,7 @@ import { PageHeaderWrapper } from '@ant-design/pro-layout';
 import BraftEditor from 'braft-editor';
 import 'braft-editor/dist/index.css';
 import styles from './style.less';
-
+import {weijngDict} from './dict';
 export class Tools extends React.Component<{}, { replaceState: any }> {
   constructor(props: any) {
     super(props);
@@ -16,7 +16,11 @@ export class Tools extends React.Component<{}, { replaceState: any }> {
   componentWillMount() {}
 
   handleEditorChange = state => {
-    const replaceHTML = state.toText().replace(/(\d+)/gm, '<span style="color:red;">$1</span>');
+    let replaceHTML = state.toText();
+    weijngDict.map(ele => {
+      let weijngReg = new RegExp(`(${ele})`, 'g');
+      replaceHTML = replaceHTML.replace(weijngReg, '<span style="color:red;">$1</span>')
+    })
     const tmp = BraftEditor.createEditorState(replaceHTML);
     this.setState({ replaceState: tmp });
   };
@@ -24,7 +28,6 @@ export class Tools extends React.Component<{}, { replaceState: any }> {
   render() {
     return (
       <>
-        <h3>工具页面</h3>
         <Row>
           <Col span={12}>
             <BraftEditor
